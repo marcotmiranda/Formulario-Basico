@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>{{title}}</h1>
+  <form class="row g-3 needs-validation" [formGroup]='newFormulario' (ngSubmit)='login()' novalidate>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip01" class="form-label">CEP</label>
+      <input type="text" class="form-control"  formControlName='cep' (change)='chamaCep()'>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Rua</label>
+      <input type="text" class="form-control"  formControlName='rua'>
+    </div>
+     <div class="col-md-4 position-relative">
+      <label for="validationTooltip01" class="form-label">Cidade</label>
+      <input type="text" class="form-control"  formControlName='cidade'>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">Bairro</label>
+      <input type="text" class="form-control"  formControlName='bairro'>
+      <div class="valid-tooltip">
+        Muito bom!
+      </div>
+    </div>
+    <div class="col-md-4 position-relative">
+      <label for="validationTooltip02" class="form-label">UF</label>
+      <input type="text" class="form-control"  formControlName='uf'>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+  </form>
+</div>
